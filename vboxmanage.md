@@ -75,7 +75,7 @@ vboxmanage storageattach Win3 --storagectl ide-controller --port 0 --device 1 --
 
 >vboxmanage natnetwork list
 
-**Создание новой сети: **
+**Создание новой сети:**
 
 > vboxmanage natnetwork add --netname UbuntuNat --network 10.0.4.0/24 --enable --dhcp on --ipv6 off
 
@@ -92,6 +92,15 @@ vboxmanage storageattach Win3 --storagectl ide-controller --port 0 --device 1 --
 >vboxmanage modifyvm ubuntu1 --nic2 natnetwork --nat-network2 UbuntuNat
 >vboxmanage modifyvm ubuntu2 --nic2 natnetwork --nat-network2 UbuntuNat
 
+#### Sharedfolder
+
+**Подключить директорию из хоста в виртуалку**
+
+>vboxmanage sharedfolder add vm --name vmail --hostpath /var/vmail/
+
+**Отключить директорию из хоста в виртуалку**
+
+>vboxmanage sharedfolder remove vm --name vmail 
 
 ***
 
@@ -104,9 +113,9 @@ vboxmanage storageattach Win3 --storagectl ide-controller --port 0 --device 1 --
 > vboxmanage modifyvm ubuntu1604 --vrdeport 3001
 > vboxmanage modifyvm ubuntu1604 --vrdeproperty VNCPassword="secret"
 
-**Подключаемся **
+**Подключаемся**
 
-*xvncviewer 127.0.0.1:3001
+>xvncviewer 127.0.0.1:3001
 
 ***
 
@@ -184,7 +193,8 @@ vboxmanage storageattach Win3 --storagectl ide-controller --port 0 \
 \Запускам, устанавливаем ОС
 \Потом подключаем второй CD диск
 
-vboxmanage storageattach Win3 --storagectl ide-controller --port 0 --device 1 --type dvddrive --medium /usr/home/user/MS.2003.R2.Ent.x64/zenx642b.iso
+vboxmanage storageattach Win3 --storagectl ide-controller --port 0 --device 1 \
+	--type dvddrive --medium /usr/home/user/MS.2003.R2.Ent.x64/zenx642b.iso
 
 \прокидываем порт RDP
 
