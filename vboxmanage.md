@@ -13,6 +13,9 @@ vboxmanage list ostypes - Список поддерживаемых типов �
 
 > vboxmanage showvminfo vm
 
+**Изменить директорию где храняться вирутальные машины**
+> vboxmanage setproperty machinefolder /path/to/directory/
+
 #### Запуск виртуальной машины с именем _vm_ без GUI 
 
 >vboxmanage startvm --type headless vm
