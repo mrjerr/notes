@@ -121,5 +121,4 @@ r'\2\1' - заменяем на конструкцию которая состо
 line = 'There’ll be no more "Aaaaa"'
 re.sub(r'(\w)\1+', r'\1', line) # 'There’l be no more "Aa"'
 
-
 ```
