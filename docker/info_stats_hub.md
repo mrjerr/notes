@@ -1,4 +1,4 @@
-#Docker Info
+# Docker Info
 
 **docker ps -sa** - вывод инф о котнейнерах включая занимаемое место
 
@@ -28,17 +28,17 @@ CONTAINER           CPU %               MEM USAGE / LIMIT   MEM %               
 ```
 **docker inspect <id, name, tag>** - выводит информацию в формате json об образе или контейнере, можно увидеть какой ip получил контейнер, работает ли он, с какими командами запущен, какие переменные окружения заданы и т.д.
 _____
-#Dockerhub
+# Dockerhub
  1) Ресгитрация на сайте https://hub.docker.com
- 2) Создаем на сайте репозиторий, заполняем **name** и **short description**
+ 2) Создаем на сайте репозиторий, заполняем **name** и **short description** - 
  **username/name_of_my_image** - пример имени репозитория
- 3) Создаем и заполняем Dockerfile и создаем образ
+ 3) Создаем и заполняем Dockerfile и создаем образ - 
  **docker build -t username/name_of_my_image .**
  4) **docker login** - выполняем комманду, вводим логин и пароль с которым регистрировались на сайте hub.docker.com
- 5) выгружаем свой образ на DockerHub
+ 5) выгружаем свой образ на DockerHub - 
  **docker push username/name_of_my_image**
 _____
-##Version & Info
+## Version & Info
 ```
 > docker version
 Client:
