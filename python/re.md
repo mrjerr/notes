@@ -1,5 +1,10 @@
 regular expression examples
 =
+
+### Online ресурсы
+- https://regex101.com/
+- https://pythex.org/
+
 **Функции**
 ```
 re.match - проверяет входит ли шаблон в строку если нет возвращает None
