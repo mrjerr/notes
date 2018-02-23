@@ -21,8 +21,15 @@ Django Admin
 |Change	|{{ app_label }}_{{ model_name }}_change	| object_id
 
 
+In tamplate
 ```python
 {% url 'admin:store_category_changelist'%}
 
 {% url 'admin:store_filtername_change' filter.id %}
+```
+
+In View
+```python
+  return redirect('admin:store_category_changelist')
+  return redirect('admin:store_filtername_change', id=filter.id)
 ```
